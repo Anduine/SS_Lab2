@@ -70,15 +70,6 @@ void parseGTR(std::string nameinputfile, std::string nameoutfile)
 					outputf << '\t';
 				}
 			}
-			/*else if (g - 48 == counter)
-			{
-				levels.push_back(counter);
-				for (int j = 0; j < levels[counter]-1; j++)
-				{
-					outputf << '\t';
-				}
-				counter++;
-			}*/
 	}
 
 	for (int i = levels.size() - 1; i >= 0; i--)
