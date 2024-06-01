@@ -10,4 +10,4 @@ struct Person2 {
     string birthdate;
 };
 
-void parseXML(string outfile, string inputfile = "tree.xml");
+void parseXML(string outfile, string inputfile = "E:\\Univer\\SS_GDtaK\\sr2\\program\\SS_Lab2\\tree.xml");

@@ -30,47 +30,42 @@ void parseXML(string outfile, string inputfile)
         }
         if (buff == "<person")
         {
-            inputf >> buff;
-
-            if (buff.find("name"))
-            {
-                int pos = buff.find("\"");
-                buff.erase(0, pos + 1);
-                pos = buff.find("\"");
-                buff.erase(pos, 1);
-
+            int a = x;
+            while (a == x) {
                 inputf >> buff;
-                outputf << x << " NAME " << buff;
-            }
-            else if (buff.find("surname"))
-            {
-                int pos = buff.find("\"");
-                buff.erase(0, pos + 1);
-                pos = buff.find("\"");
-                buff.erase(pos, 1);
 
-                inputf >> buff;
-                outputf << x << " SURNAME " << buff;
-            }
-            else if (buff.find("gender"))
-            {
-                int pos = buff.find("\"");
-                buff.erase(0, pos + 1);
-                pos = buff.find("\"");
-                buff.erase(pos, 1);
+                if (buff.find("surname") != -1) {
+                    int pos = buff.find("\"");
+                    buff.erase(0, pos + 1);
+                    pos = buff.find("\"");
+                    buff.erase(pos, 1);
 
-                inputf >> buff;
-                outputf << x << " GENDER " << buff;
-            }
-            else if (buff.find("birthdate"))
-            {
-                int pos = buff.find("\"");
-                buff.erase(0, pos + 1);
-                pos = buff.find("\"");
-                buff.erase(pos, 2);
+                    outputf << x << " SURNAME " << buff << endl;
+                }
+                else if (buff.find("name") != -1) {
+                    int pos = buff.find("\"");
+                    buff.erase(0, pos + 1);
+                    pos = buff.find("\"");
+                    buff.erase(pos, 1);
 
-                inputf >> buff;
-                outputf << x++ << " BIRTHDATE " << buff;
+                    outputf << x << " NAME " << buff << endl;
+                }
+                else if (buff.find("gender") != -1) {
+                    int pos = buff.find("\"");
+                    buff.erase(0, pos + 1);
+                    pos = buff.find("\"");
+                    buff.erase(pos, 1);
+
+                    outputf << x << " GENDER " << buff << endl;
+                }
+                else if (buff.find("birthdate") != -1) {
+                    int pos = buff.find("\"");
+                    buff.erase(0, pos + 1);
+                    pos = buff.find("\"");
+                    buff.erase(pos, 2);
+
+                    outputf << x++ << " BIRTHDATE " << buff << endl;
+                }
             }
         }
     }
