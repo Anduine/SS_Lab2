@@ -11,7 +11,7 @@ int main()
 {
     parseGTR("tree.gtr");
 
-	parseXML("treeout.xml");
+	parseXML("treeout.gtr");
 
 	return 0;
 }
