@@ -32,4 +32,9 @@
       <Filter>Исходные файлы</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="treeout.xml">
+      <Filter>Исходные файлы</Filter>
+    </Xml>
+  </ItemGroup>
 </Project>

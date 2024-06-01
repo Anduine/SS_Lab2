@@ -7,6 +7,7 @@ using namespace std;
 int main()
 {
     cout << "Hello cxsfsdf";
+	parseGTR("tree.gtr");
 
 	return 0;
 }
