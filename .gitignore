@@ -11,9 +11,9 @@
 *.user
 *.userosscache
 *.sln.docstates
-SS_Lab2.vcxproj
-SS_Lab2.vcxproj.filters
-SS_Lab2.sln
+*.vcxproj
+*.vcxproj.filters
+*.sln
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
