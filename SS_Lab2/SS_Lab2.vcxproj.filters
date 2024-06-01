@@ -36,5 +36,8 @@
     <Xml Include="treeout.xml">
       <Filter>Исходные файлы</Filter>
     </Xml>
+    <Xml Include="tree.xml">
+      <Filter>Исходные файлы</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

@@ -137,6 +137,7 @@
     <None Include="tree.gtr" />
   </ItemGroup>
   <ItemGroup>
+    <Xml Include="tree.xml" />
     <Xml Include="treeout.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
