@@ -3,9 +3,7 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-SS_Lab2.vcxproj
-SS_Lab2.vcxproj.filters
-SS_Lab2.sln
+
 
 # User-specific files
 *.rsuser
@@ -13,6 +11,9 @@ SS_Lab2.sln
 *.user
 *.userosscache
 *.sln.docstates
+*.vcxproj
+*.vcxproj.filters
+*.sln
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

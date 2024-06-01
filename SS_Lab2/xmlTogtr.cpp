@@ -23,7 +23,7 @@ void parseXML(string outfile, string inputfile)
 
     while (inputf)
     {
-        inputf >> ws;
+        //inputf >> ws;
         inputf >> buff;
         if (buff == "</person>") {
             break;
