@@ -8,6 +8,7 @@ int main()
 {
     cout << "Hello cxsfsdf";
 	parseGTR("tree.gtr");
-
+	//commit test
+	cout << "commit test";
 	return 0;
 }
