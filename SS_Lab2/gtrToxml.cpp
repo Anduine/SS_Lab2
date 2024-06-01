@@ -23,10 +23,20 @@ void parseGTR(std::string inputfile, std::string outfile)
 		if (buff == "1")
 		{
 			inputf >> buff;
-			outputf << "<person name=\"" << buff << "\" ";
+			if (buff == "NAME")
+			{
+				inputf >> buff;
+				outputf << "<person NAME=\"" << buff << "\" ";
+			}
+			else
+			{
+				outputf << buff;
+				inputf >> buff; 
+				outputf << "=\"" << buff << "\" ";
+			}
+
 		}
 
-		//outputf << buff;
 	}
 
 	inputf.close();
