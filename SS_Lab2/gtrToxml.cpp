@@ -17,7 +17,18 @@ void parseGTR(std::string inputfile, std::string outfile)
 		return;
 	}
 
-	inputf >> buff;
+	while (inputf)
+	{
+		inputf >> buff;
+		if (buff == "1")
+		{
+			inputf >> buff;
+			outputf << "<person name=\"" << buff << "\" ";
+		}
 
-	outputf << buff;
+		//outputf << buff;
+	}
+
+	inputf.close();
+	outputf.close();
 };
