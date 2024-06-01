@@ -9,9 +9,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello cxsfsdf";
-    parseXML("treeout.gtr");
-	//commit test
-	cout << "commit test";
+    parseGTR("tree.gtr");
+
 	return 0;
 }

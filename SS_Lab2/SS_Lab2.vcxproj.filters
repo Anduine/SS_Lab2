@@ -21,9 +21,15 @@
     <ClCompile Include="gtrToxml.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="xmlTogtr.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gtrToxml.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlTogtr.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="gtrToxml.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="xmlTogtr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gtrToxml.h" />
+    <ClInclude Include="xmlTogtr.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="tree.gtr" />

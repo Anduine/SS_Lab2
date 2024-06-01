@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <stack>
+#include <vector>
 #include "gtrToxml.h"
 
 void lowercase(std::string &str)
@@ -15,8 +15,9 @@ void lowercase(std::string &str)
 void parseGTR(std::string nameinputfile, std::string nameoutfile)
 {
 	std::string buff;
-	std::stack<int> levels;
-	bool closepers = false;
+	std::vector<int> levels;
+
+
 	std::ifstream inputf(nameinputfile);
 	if (!inputf) {
 		std::cerr << "Unable to open input file\n";
@@ -29,22 +30,16 @@ void parseGTR(std::string nameinputfile, std::string nameoutfile)
 	}
 
 	char g;
-	int counter{ 1 };
+	int counter{ 0 };
+	inputf >> g;
+	if (g - 48 > counter)
+	{
+		levels.push_back(++counter);
+	}
+
 
 	while (inputf)
 	{
-		inputf >> g;
-		if (g-48 != counter)
-		{
-			levels.push(counter);
-
-		}
-		if (g-48 > counter)
-		{
-			outputf << '\t';
-			counter++;
-		}
-
 			inputf >> buff;
 			if (buff == "NAME")
 			{
@@ -65,6 +60,34 @@ void parseGTR(std::string nameinputfile, std::string nameoutfile)
 				inputf >> buff; 
 				outputf << "=\"" << buff << "\" ";
 			}
+
+			inputf >> g;
+			if (g - 48 > counter)
+			{
+				levels.push_back(++counter);
+				for (int j = 0; j < levels[counter - 1] - 1; j++)
+				{
+					outputf << '\t';
+				}
+			}
+			/*else if (g - 48 == counter)
+			{
+				levels.push_back(counter);
+				for (int j = 0; j < levels[counter]-1; j++)
+				{
+					outputf << '\t';
+				}
+				counter++;
+			}*/
+	}
+
+	for (int i = levels.size() - 1; i >= 0; i--)
+	{
+		for (int j = 0; j < levels[i]-1; j++)
+		{
+			outputf << '\t';
+		}
+		outputf << "</person>\n";
 	}
 
 	inputf.close();

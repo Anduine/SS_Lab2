@@ -1,3 +1,8 @@
 <person name="Andrew" surname="Smith" gender="M" birthdate="1980-01-01">
 	<person name="John" surname="Smith" gender="M" birthdate="2005-05-05">
-2005-05-05="2005-05-05" 
+		<person name="Wanessa" surname="Smith" gender="W" birthdate="1999-01-26">
+			<person name="Jenny" surname="Smith" gender="W" birthdate="2007-02-09">
+			</person>
+		</person>
+	</person>
+</person>
