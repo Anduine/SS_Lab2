@@ -5,7 +5,7 @@
 
 int main()
 {
-
+	parseGTR("tree.gtr");
 
 	return 0;
 }
