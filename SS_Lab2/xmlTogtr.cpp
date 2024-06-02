@@ -10,12 +10,12 @@ void parseXML(string outfile, string inputfile)
 	string buff;
 	ifstream inputf(inputfile);
 	if (!inputf) {
-		cerr << "Неможливо відкрити вхідний файл " << inputfile << '\n';
+		cerr << "Unable to open input file " << inputfile << '\n';
 		return;
 	}
 	std::ofstream outputf(outfile);
 	if (!outputf) {
-		cerr << "Неможливо відкрити вихідний файл " << outfile << '\n';
+		cerr << "Unable to open output file " << outfile << '\n';
 		return;
 	}
 
@@ -71,5 +71,5 @@ void parseXML(string outfile, string inputfile)
 
     inputf.close();
     outputf.close();
-    std::cout << "Інформація записана із файлу " << inputfile << " у файл " << outfile << '\n';
+    std::cout << "Information is written from a file " << inputfile << " to file " << outfile << '\n';
 };
