@@ -9,9 +9,9 @@ using namespace std;
 
 int main()
 {
-    parseGTR("tree.gtr");
+    parseGTR("tree.gtr");  // name of inputfile
 
-	parseXML("treeout.gtr");
+	parseXML("treeout.gtr", "treeout.xml");  // name of outputfile
 
 	return 0;
 }

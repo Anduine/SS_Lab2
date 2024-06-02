@@ -20,12 +20,12 @@ void parseGTR(std::string nameinputfile, std::string nameoutfile)
 
 	std::ifstream inputf(nameinputfile);
 	if (!inputf) {
-		std::cerr << "Unable to open input file\n";
+		std::cerr << "Неможливо відкрити вхідний файл " << nameinputfile << '\n';
 		return;
 	}
 	std::ofstream outputf(nameoutfile);
 	if (!outputf) {
-		std::cerr << "Unable to open output file\n";
+		std::cerr << "Неможливо відкрити вихідний файл " << nameoutfile << '\n';
 		return;
 	}
 
@@ -83,4 +83,5 @@ void parseGTR(std::string nameinputfile, std::string nameoutfile)
 
 	inputf.close();
 	outputf.close();
+	std::cout << "Інформація записана із файлу " << nameinputfile << " у файл " << nameoutfile;
 };

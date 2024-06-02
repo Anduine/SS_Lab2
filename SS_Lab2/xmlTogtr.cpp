@@ -10,12 +10,12 @@ void parseXML(string outfile, string inputfile)
 	string buff;
 	ifstream inputf(inputfile);
 	if (!inputf) {
-		cerr << "Unable to open input file\n";
+		cerr << "Неможливо відкрити вхідний файл " << inputfile << '\n';
 		return;
 	}
 	std::ofstream outputf(outfile);
 	if (!outputf) {
-		cerr << "Unable to open output file\n";
+		cerr << "Неможливо відкрити вихідний файл " << outfile << '\n';
 		return;
 	}
 
@@ -23,7 +23,6 @@ void parseXML(string outfile, string inputfile)
 
     while (inputf)
     {
-        //inputf >> ws;
         inputf >> buff;
         if (buff == "</person>") {
             break;
@@ -72,4 +71,5 @@ void parseXML(string outfile, string inputfile)
 
     inputf.close();
     outputf.close();
+    std::cout << "Інформація записана із файлу " << inputfile << " у файл " << outfile;
 };
