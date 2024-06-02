@@ -83,5 +83,5 @@ void parseGTR(std::string nameinputfile, std::string nameoutfile)
 
 	inputf.close();
 	outputf.close();
-	std::cout << "Інформація записана із файлу " << nameinputfile << " у файл " << nameoutfile;
+	std::cout << "Інформація записана із файлу " << nameinputfile << " у файл " << nameoutfile << '\n';
 };

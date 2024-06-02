@@ -71,5 +71,5 @@ void parseXML(string outfile, string inputfile)
 
     inputf.close();
     outputf.close();
-    std::cout << "Інформація записана із файлу " << inputfile << " у файл " << outfile;
+    std::cout << "Інформація записана із файлу " << inputfile << " у файл " << outfile << '\n';
 };
